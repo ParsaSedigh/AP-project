@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'categories.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -113,7 +115,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                   child: const Text('Confirm'),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Categories()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
                   },
                 )
             ),
@@ -127,7 +129,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     
                   ),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForSignInPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForSignInPage()));
                   },
                 )
               ],
@@ -144,6 +146,7 @@ class AppBarForSignInPage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
         appBar: AppBar(title: const Text(_title),
@@ -212,7 +215,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: ElevatedButton(
                   child: const Text('Confirm'),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Categories()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
                   },
                 )
             ),
@@ -221,54 +224,4 @@ class _SignInPageState extends State<SignInPage> {
        ),
     );
   }
-}
-
-// class SignInPage extends State<MyStatefulWidget> {
-//   SignInPage({Key? key}) : super(key: key) ;
-//   TextEditingController phoneNumberController = TextEditingController();
-//   TextEditingController passwordController = TextEditingController();
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
-//       child: ListView(
-//         children: <Widget>[
-//           Container(
-//               padding: const EdgeInsets.all(10),
-//               child: TextField(
-//                 controller: phoneNumberController,
-//                 decoration: const InputDecoration(
-//                   border: OutlineInputBorder(),
-//                   labelText: 'Phone Number',
-//                 ),
-//               ),
-//             ),
-//             Container(
-//               padding: const EdgeInsets.all(10),
-//               child: TextField(
-//                 obscureText: true,
-//                 controller: passwordController,
-//                 decoration: const InputDecoration(
-//                   border: OutlineInputBorder(),
-//                   labelText: 'Password',
-//                 ),
-//               ),
-//             ),
-//         ],
-//       ),
-//      );
-//     throw UnimplementedError();
-//   }
-// }
-class Categories extends StatelessWidget {
-  const Categories({Key? key}) : super(key: key) ;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold( 
-
-    );
-    throw UnimplementedError();
-  }
-  
 }
