@@ -34,8 +34,12 @@ class _Categories extends State<Categories> {
         body: SingleChildScrollView(
       child: Column(
         children: [
+          const ListTile(
+            title: Text('Digital Products',
+            style: TextStyle(fontWeight: FontWeight.w800)),
+          ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 20.0),
+            margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
               // This next line does the trick.
@@ -64,8 +68,12 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const ListTile(
+            title: Text('Clothes',
+            style: TextStyle(fontWeight: FontWeight.w800)),
+          ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 20.0),
+            margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
               // This next line does the trick.
@@ -94,8 +102,12 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const ListTile(
+            title: Text('Book & Stationary',
+            style: TextStyle(fontWeight: FontWeight.w800)),
+          ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 20.0),
+            margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
               // This next line does the trick.
@@ -124,14 +136,19 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const ListTile(
+            title: Text('Sport & Travel',
+            style: TextStyle(fontWeight: FontWeight.w800)),
+          ),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 20.0),
+            margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
               // This next line does the trick.
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
+                  alignment: Alignment.center,
                   width: 160.0,
                   color: Colors.red,
                 ),
