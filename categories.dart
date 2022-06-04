@@ -168,23 +168,55 @@ class _Categories extends State<Categories> {
               children: <Widget>[
                 Container(
                   width: 160.0,
-                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/Cambourne-Book-Club.jpg'),
+                      const Text('Book',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.blue,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/2069613.jpg'),
+                      const Text('Stationary',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.green,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/Instruments-1-1.jpg'),
+                      const Text('Music',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.orange,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/handicraft-500x500.jpg'),
+                      const Text('Handicrafts',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -203,23 +235,42 @@ class _Categories extends State<Categories> {
               children: <Widget>[
                 Container(
                   width: 160.0,
-                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/8030014d4dc640195859e0e3f2af5ba9.jpg'),
+                      const Text('Sport Clothes',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.blue,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/how-to-clean-and-disinfect-sports-equipment.jpg'),
+                      const Text('Sport Tools',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.orange,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/960x0.jpg'),
+                      const Text('Camping & traveling tools',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12
+                      ),),
+                    ],
+                  ),
                 ),
               ],
             ),
