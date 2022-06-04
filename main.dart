@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text(_title),
         leading: new Icon(Icons.shopping_cart),
-        backgroundColor: Colors.lightBlueAccent,),
+        backgroundColor: Color.fromARGB(226, 17, 118, 185),),
         body: const MyStatefulWidget(),
       ),
     );
@@ -51,7 +51,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: const Text(
                   'Sign up',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Color.fromARGB(226, 17, 118, 185),
                       fontWeight: FontWeight.w500,
                       fontSize: 30),
                 )),
@@ -113,6 +113,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Color.fromARGB(226, 17, 118, 185)),
                   child: const Text('Confirm'),
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
@@ -123,6 +124,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               children: <Widget>[
                 const Text('Already have an account?'),
                 TextButton(
+                  style: TextButton.styleFrom(primary: Color.fromARGB(226, 17, 118, 185)),
                   child: const Text(
                     'Sign in',
                     style: TextStyle(fontSize: 20),
@@ -151,7 +153,7 @@ class AppBarForSignInPage extends StatelessWidget{
       home: Scaffold(
         appBar: AppBar(title: const Text(_title),
         leading: new Icon(Icons.shopping_cart),
-        backgroundColor: Colors.lightBlueAccent,),
+        backgroundColor: Color.fromARGB(226, 17, 118, 185),),
         body: const SignInPage(),
       ),
     );
@@ -183,7 +185,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: const Text(
                   'Sign in',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Color.fromARGB(226, 17, 118, 185),
                       fontWeight: FontWeight.w500,
                       fontSize: 30),
                 )),
@@ -211,8 +213,9 @@ class _SignInPageState extends State<SignInPage> {
               ),
               Container(
                 height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0) ,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(primary: Color.fromARGB(226, 17, 118, 185)),
                   child: const Text('Confirm'),
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));

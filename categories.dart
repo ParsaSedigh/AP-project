@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AppBarForCategoriesPage extends StatelessWidget {
@@ -6,12 +8,13 @@ class AppBarForCategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
           leading: new Icon(Icons.shopping_cart),
-          backgroundColor: Colors.lightBlueAccent,
+          backgroundColor: Color.fromARGB(226, 17, 118, 185),
         ),
         body: const Categories(),
       ),
@@ -22,7 +25,6 @@ class AppBarForCategoriesPage extends StatelessWidget {
 
 class Categories extends StatefulWidget {
   const Categories({Key? key}) : super(key: key);
-
   @override
   _Categories createState() => _Categories();
 }
@@ -30,17 +32,17 @@ class Categories extends StatefulWidget {
 class _Categories extends State<Categories> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
         body: SingleChildScrollView(
       child: Column(
         children: [
           Container(
               alignment: Alignment.center,
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               child: const Text(
                 'Categories',
                 style: TextStyle(
-                    color: Colors.blue,
+                    color: Color.fromARGB(226, 17, 118, 185),
                     fontWeight: FontWeight.w500,
                     fontSize: 30),
               )),
@@ -58,23 +60,30 @@ class _Categories extends State<Categories> {
               children: <Widget>[
                 Container(
                   width: 160.0,
-                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/d_s22ultraphntmblck512_2020_13.jpg'),
+                      const Text('Mobile'),
+                    ],
+                  )
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.blue,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/photo-1593642632823-8f785ba67e45.jpg'),
+                      const Text('Lap top'),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.orange,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/download.jpg'),
+                      const Text('Camera'),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -93,23 +102,30 @@ class _Categories extends State<Categories> {
               children: <Widget>[
                 Container(
                   width: 160.0,
-                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/mens-occasionwear-1805.jpg'),
+                      const Text('Men'),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.blue,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/mens-occasionwear-1805.jpg'),
+                      const Text('Women'),
+                    ],
+                  ),
                 ),
                 Container(
                   width: 160.0,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.yellow,
-                ),
-                Container(
-                  width: 160.0,
-                  color: Colors.orange,
+                  child: Column(
+                    children: [
+                      Image.asset('assets/images/mens-occasionwear-1805.jpg'),
+                      const Text('Kids'),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -188,23 +204,27 @@ class _Categories extends State<Categories> {
       ),
     ),
     bottomNavigationBar: BottomNavigationBar(
+      type: BottomNavigationBarType.shifting,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.lightBlueAccent
+            backgroundColor: Color.fromARGB(226, 17, 118, 185)
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category_sharp),
             label: 'Categories',
+            backgroundColor: Color.fromARGB(226, 17, 118, 185)
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart_rounded),
             label: 'Cart',
+            backgroundColor: Color.fromARGB(226, 17, 118, 185)
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_rounded),
             label: 'My profile', 
+            backgroundColor: Color.fromARGB(226, 17, 118, 185)
           ),
         ],
       ),
