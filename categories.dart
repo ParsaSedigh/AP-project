@@ -34,7 +34,7 @@ class _Categories extends State<Categories> {
   Widget build(BuildContext context) {
     return  Scaffold(
         body: SingleChildScrollView(
-      child: Column(
+        child: Column(
         children: [
           Container(
               alignment: Alignment.center,
@@ -63,7 +63,11 @@ class _Categories extends State<Categories> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/d_s22ultraphntmblck512_2020_13.jpg'),
-                      const Text('Mobile'),
+                      const Text('Mobile',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
                     ],
                   )
                 ),
@@ -72,7 +76,11 @@ class _Categories extends State<Categories> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/photo-1593642632823-8f785ba67e45.jpg'),
-                      const Text('Lap top'),
+                      const Text('Lap top',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
                     ],
                   ),
                 ),
@@ -81,7 +89,11 @@ class _Categories extends State<Categories> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/download.jpg'),
-                      const Text('Camera'),
+                      const Text('Camera',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
                     ],
                   ),
                 ),
@@ -105,7 +117,11 @@ class _Categories extends State<Categories> {
                   child: Column(
                     children: [
                       Image.asset('assets/images/mens-occasionwear-1805.jpg'),
-                      const Text('Men'),
+                      const Text('Men',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
                     ],
                   ),
                 ),
@@ -113,8 +129,12 @@ class _Categories extends State<Categories> {
                   width: 160.0,
                   child: Column(
                     children: [
-                      Image.asset('assets/images/mens-occasionwear-1805.jpg'),
-                      const Text('Women'),
+                      Image.asset('assets/images/a4642577-1b1b-42d1-abb2-0cf84361b563.jpg'),
+                      const Text('Women',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
                     ],
                   ),
                 ),
@@ -122,8 +142,12 @@ class _Categories extends State<Categories> {
                   width: 160.0,
                   child: Column(
                     children: [
-                      Image.asset('assets/images/mens-occasionwear-1805.jpg'),
-                      const Text('Kids'),
+                      Image.asset('assets/images/1605784309.jpg'),
+                      const Text('Kids',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15
+                      ),),
                     ],
                   ),
                 ),
