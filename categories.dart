@@ -1,6 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+
+import 'Profile.dart';
 
 class AppBarForCategoriesPage extends StatelessWidget {
   const AppBarForCategoriesPage({Key? key}) : super(key: key);
@@ -49,7 +49,11 @@ class _Categories extends State<Categories> {
               const SizedBox(height: 50,),
           const ListTile(
             title: Text('Digital Products',
-                style: TextStyle(fontWeight: FontWeight.w800)),
+                style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 18, 
+                  ),
+                ),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5.0),
@@ -99,6 +103,13 @@ class _Categories extends State<Categories> {
                 ),
               ],
             ),
+          ),
+          const Divider(
+            height: 40,
+            thickness: 2,
+            indent: 5,
+            endIndent:10,
+            color: Colors.black,
           ),
           const SizedBox(height: 50),
           const ListTile(
@@ -153,6 +164,13 @@ class _Categories extends State<Categories> {
                 ),
               ],
             ),
+          ),
+          const Divider(
+            height: 40,
+            thickness: 2,
+            indent: 5,
+            endIndent:10,
+            color: Colors.black,
           ),
           const SizedBox(height: 50),
           const ListTile(
@@ -221,6 +239,13 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const Divider(
+            height: 40,
+            thickness: 2,
+            indent: 5,
+            endIndent:10,
+            color: Colors.black,
+          ),
           const SizedBox(height: 50),
           const ListTile(
             title: Text('Sport & Travel',
@@ -279,13 +304,12 @@ class _Categories extends State<Categories> {
       ),
     ),
     bottomNavigationBar: BottomNavigationBar(
+      onTap: ((value) {
+        if(value == 2) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForProfilePage()));
+        if(value == 0) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForCategoriesPage()));
+      }),
       type: BottomNavigationBarType.shifting,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Color.fromARGB(226, 17, 118, 185)
-          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category_sharp),
             label: 'Categories',
