@@ -34,15 +34,26 @@ class _Categories extends State<Categories> {
         body: SingleChildScrollView(
       child: Column(
         children: [
+          Container(
+              alignment: Alignment.center,
+              padding: const EdgeInsets.all(10),
+              child: const Text(
+                'Categories',
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 30),
+              )),
+              const SizedBox(height: 50,),
           const ListTile(
             title: Text('Digital Products',
-            style: TextStyle(fontWeight: FontWeight.w800)),
+                style: TextStyle(fontWeight: FontWeight.w800)),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
-              // This next line does the trick.
+              padding: EdgeInsets.all(10),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
@@ -68,15 +79,16 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const SizedBox(height: 50),
           const ListTile(
-            title: Text('Clothes',
-            style: TextStyle(fontWeight: FontWeight.w800)),
+            title:
+                Text('Clothes', style: TextStyle(fontWeight: FontWeight.w800)),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
-              // This next line does the trick.
+              padding: EdgeInsets.all(10),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
@@ -102,15 +114,16 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const SizedBox(height: 50),
           const ListTile(
             title: Text('Book & Stationary',
-            style: TextStyle(fontWeight: FontWeight.w800)),
+                style: TextStyle(fontWeight: FontWeight.w800)),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
-              // This next line does the trick.
+              padding: EdgeInsets.all(10),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
@@ -136,19 +149,19 @@ class _Categories extends State<Categories> {
               ],
             ),
           ),
+          const SizedBox(height: 50),
           const ListTile(
             title: Text('Sport & Travel',
-            style: TextStyle(fontWeight: FontWeight.w800)),
+                style: TextStyle(fontWeight: FontWeight.w800)),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5.0),
             height: 200.0,
             child: ListView(
-              // This next line does the trick.
+              padding: EdgeInsets.all(10),
               scrollDirection: Axis.horizontal,
               children: <Widget>[
                 Container(
-                  alignment: Alignment.center,
                   width: 160.0,
                   color: Colors.red,
                 ),
