@@ -186,6 +186,28 @@ class _Categories extends State<Categories> {
           ),
         ],
       ),
-    ));
+    ),
+    bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.lightBlueAccent
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category_sharp),
+            label: 'Categories',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart_rounded),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_rounded),
+            label: 'My profile', 
+          ),
+        ],
+      ),
+    );
   }
 }
