@@ -44,29 +44,42 @@ class _Profile extends State<Profile> {
       
       
       
-      bottomNavigationBar: BottomNavigationBar(
-      onTap: ((value) {
-        if(value == 2) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForProfilePage()));
-        if(value == 0) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForCategoriesPage()));
-      }),
-      type: BottomNavigationBarType.shifting,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.category_sharp),
-            label: 'Categories',
-            backgroundColor: Color.fromARGB(226, 17, 118, 185)
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_rounded),
-            label: 'Cart',
-            backgroundColor: Color.fromARGB(226, 17, 118, 185)
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_rounded),
-            label: 'My profile', 
-            backgroundColor: Color.fromARGB(226, 17, 118, 185)
-          ),
-        ],
+      bottomNavigationBar: 
+      
+      Container(
+        decoration: BoxDecoration(
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              color: Colors.black,
+              blurRadius: 10,
+            ),
+          ],
+        ),
+        child: BottomNavigationBar(
+        onTap: ((value) {
+          if(value == 2) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForProfilePage()));
+          if(value == 0) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForCategoriesPage()));
+        }),
+        type: BottomNavigationBarType.fixed,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.category_sharp),
+              label: 'Categories',
+              backgroundColor: Color.fromARGB(226, 17, 118, 185)
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart_rounded),
+              label: 'Cart',
+              backgroundColor: Color.fromARGB(226, 17, 118, 185)
+            ),
+            BottomNavigationBarItem(
+
+              icon: Icon(Icons.person_rounded),
+              label: 'My profile', 
+              backgroundColor: Color.fromARGB(226, 17, 118, 185)
+            ),
+          ],
+        ),
       ),
     );
     
