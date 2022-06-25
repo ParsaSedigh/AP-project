@@ -13,13 +13,12 @@ class AppBarForCategoriesPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
-          leading: new Icon(Icons.shopping_cart),
-          backgroundColor: Color.fromARGB(226, 17, 118, 185),
+          leading: const Icon(Icons.shopping_cart),
+          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
         ),
         body: const Categories(),
       ),
     );
-    throw UnimplementedError();
   }
 }
 
@@ -32,321 +31,491 @@ class Categories extends StatefulWidget {
 class _Categories extends State<Categories> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(
+      body: SingleChildScrollView(
         child: Column(
-        children: [
-          Container(
-              alignment: Alignment.center,
-              padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-              child: const Text(
-                'Categories',
-                style: TextStyle(
-                    color: Color.fromARGB(226, 17, 118, 185),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 30),
-              )),
-              const SizedBox(height: 50,),
-          const ListTile(
-            title: Text('Digital Products',
+          children: [
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                child: const Text(
+                  'Categories',
+                  style: TextStyle(
+                      color: Color.fromARGB(226, 17, 118, 185),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30),
+                )),
+            const SizedBox(
+              height: 50,
+            ),
+            const ListTile(
+              title: Text(
+                'Digital Products',
                 style: TextStyle(
                   fontWeight: FontWeight.w800,
-                  fontSize: 18, 
-                  ),
+                  fontSize: 18,
                 ),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 5.0),
-            height: 200.0,
-            child: ListView(
-              padding: EdgeInsets.all(10),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/d_s22ultraphntmblck512_2020_13.jpg'),
-                      const Text('Mobile',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  )
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/photo-1593642632823-8f785ba67e45.jpg'),
-                      const Text('Lap top',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/download.jpg'),
-                      const Text('Camera',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
-          const Divider(
-            height: 40,
-            thickness: 2,
-            indent: 5,
-            endIndent:10,
-            color: Colors.black,
-          ),
-          const SizedBox(height: 50),
-          const ListTile(
-            title:
-                Text('Clothes', style: TextStyle(fontWeight: FontWeight.w800)),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 5.0),
-            height: 200.0,
-            child: ListView(
-              padding: EdgeInsets.all(10),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/mens-occasionwear-1805.jpg'),
-                      const Text('Men',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 5.0),
+              height: 200.0,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                      width: 160.0,
+                      child: Column(
+                        children: [
+                          Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset(
+                                'assets/images/d_s22ultraphntmblck512_2020_13.jpg'),
+                          ),
+                          const Text(
+                            'Mobile',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500, fontSize: 15),
+                          ),
+                        ],
+                      )),
+                  const SizedBox(
+                    width: 10,
                   ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/a4642577-1b1b-42d1-abb2-0cf84361b563.jpg'),
-                      const Text('Women',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: const BoxDecoration(
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.blueGrey,
+                                blurRadius: 5,
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                              'assets/images/photo-1593642632823-8f785ba67e45.jpg'),
+                        ),
+                        const Text(
+                          'Lap top',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/1605784309.jpg'),
-                      const Text('Kids',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
+                  const SizedBox(
+                    width: 10,
                   ),
-                ),
-              ],
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset('assets/images/download.jpg')),
+                        const Text(
+                          'Camera',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          const Divider(
-            height: 40,
-            thickness: 2,
-            indent: 5,
-            endIndent:10,
-            color: Colors.black,
-          ),
-          const SizedBox(height: 50),
-          const ListTile(
-            title: Text('Book & Stationary',
-                style: TextStyle(fontWeight: FontWeight.w800)),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 5.0),
-            height: 200.0,
-            child: ListView(
-              padding: EdgeInsets.all(10),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/Cambourne-Book-Club.jpg'),
-                      const Text('Book',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/2069613.jpg'),
-                      const Text('Stationary',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/Instruments-1-1.jpg'),
-                      const Text('Music',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/handicraft-500x500.jpg'),
-                      const Text('Handicrafts',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-              ],
+            const Divider(
+              height: 40,
+              thickness: 2,
+              indent: 5,
+              endIndent: 10,
+              color: Colors.black,
             ),
-          ),
-          const Divider(
-            height: 40,
-            thickness: 2,
-            indent: 5,
-            endIndent:10,
-            color: Colors.black,
-          ),
-          const SizedBox(height: 50),
-          const ListTile(
-            title: Text('Sport & Travel',
-                style: TextStyle(fontWeight: FontWeight.w800)),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 5.0),
-            height: 200.0,
-            child: ListView(
-              padding: EdgeInsets.all(10),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/8030014d4dc640195859e0e3f2af5ba9.jpg'),
-                      const Text('Sport Clothes',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/how-to-clean-and-disinfect-sports-equipment.jpg'),
-                      const Text('Sport Tools',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 15
-                      ),),
-                    ],
-                  ),
-                ),
-                SizedBox(width: 10,),
-                Container(
-                  width: 160.0,
-                  child: Column(
-                    children: [
-                      Image.asset('assets/images/960x0.jpg'),
-                      const Text('Camping & traveling tools',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12
-                      ),),
-                    ],
-                  ),
-                ),
-              ],
+            const SizedBox(height: 50),
+            const ListTile(
+              title: Text('Clothes',
+                  style: TextStyle(fontWeight: FontWeight.w800)),
             ),
-          ),
-        ],
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 5.0),
+              height: 200.0,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset(
+                                'assets/images/mens-occasionwear-1805.jpg')),
+                        const Text(
+                          'Men',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: const BoxDecoration(
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.blueGrey,
+                                blurRadius: 5,
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                              'assets/images/a4642577-1b1b-42d1-abb2-0cf84361b563.jpg'),
+                        ),
+                        const Text(
+                          'Women',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset('assets/images/1605784309.jpg')),
+                        const Text(
+                          'Kids',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              height: 40,
+              thickness: 2,
+              indent: 5,
+              endIndent: 10,
+              color: Colors.black,
+            ),
+            const SizedBox(height: 50),
+            const ListTile(
+              title: Text('Book & Stationary',
+                  style: TextStyle(fontWeight: FontWeight.w800)),
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 5.0),
+              height: 200.0,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset(
+                                'assets/images/Cambourne-Book-Club.jpg')),
+                        const Text(
+                          'Book',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset('assets/images/2069613.jpg')),
+                        const Text(
+                          'Stationary',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset(
+                                'assets/images/Instruments-1-1.jpg')),
+                        const Text(
+                          'Music',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Container(
+                                decoration: const BoxDecoration(
+                                  boxShadow: <BoxShadow>[
+                                    BoxShadow(
+                                      color: Colors.blueGrey,
+                                      blurRadius: 5,
+                                    ),
+                                  ],
+                                ),
+                                child: Image.asset(
+                                    'assets/images/handicraft-500x500.jpg'))),
+                        const Text(
+                          'Handicrafts',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              height: 40,
+              thickness: 2,
+              indent: 5,
+              endIndent: 10,
+              color: Colors.black,
+            ),
+            const SizedBox(height: 50),
+            const ListTile(
+              title: Text('Sport & Travel',
+                  style: TextStyle(fontWeight: FontWeight.w800)),
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 5.0),
+              height: 200.0,
+              child: ListView(
+                padding: const EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                          child: Container(
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                boxShadow: <BoxShadow>[
+                                  BoxShadow(
+                                    color: Colors.blueGrey,
+                                    blurRadius: 5,
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset(
+                                  'assets/images/8030014d4dc640195859e0e3f2af5ba9.jpg'),
+                            ),
+                          ),
+                        ),
+                        const Text(
+                          'Sport Clothes',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: const BoxDecoration(
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.blueGrey,
+                                blurRadius: 5,
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                              'assets/images/how-to-clean-and-disinfect-sports-equipment.jpg'),
+                        ),
+                        const Text(
+                          'Sport Tools',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 160.0,
+                    child: Column(
+                      children: [
+                        Container(
+                            decoration: const BoxDecoration(
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                  color: Colors.blueGrey,
+                                  blurRadius: 5,
+                                ),
+                              ],
+                            ),
+                            child: Image.asset('assets/images/960x0.jpg')),
+                        const Text(
+                          'Camping & traveling tools',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500, fontSize: 12),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-    bottomNavigationBar:
-     Container(
-       decoration: BoxDecoration(
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
-              color: Colors.black,
+              color: Colors.blueGrey,
               blurRadius: 10,
             ),
           ],
         ),
-       child: BottomNavigationBar(
-        onTap: ((value) {
-          if(value == 2) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForProfilePage()));
-          if(value == 0) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForCategoriesPage()));
-        }),
-        type: BottomNavigationBarType.fixed,
+        child: BottomNavigationBar(
+          onTap: ((value) {
+            if (value == 2) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForProfilePage()));
+            }
+            if (value == 0) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForCategoriesPage()));
+            }
+          }),
+          type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.category_sharp),
-              label: 'Categories',
-              backgroundColor: Color.fromARGB(226, 17, 118, 185)
-            ),
+                icon: Icon(Icons.category_sharp),
+                label: 'Categories',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_rounded),
-              label: 'Cart',
-              backgroundColor: Color.fromARGB(226, 17, 118, 185)
-            ),
+                icon: Icon(Icons.shopping_cart_rounded),
+                label: 'Cart',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_rounded),
-              label: 'My profile', 
-              backgroundColor: Color.fromARGB(226, 17, 118, 185)
-            ),
+                icon: Icon(Icons.person_rounded),
+                label: 'My profile',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
           ],
         ),
-     ),
+      ),
     );
   }
 }

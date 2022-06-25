@@ -13,13 +13,12 @@ class AppBarForProfilePage extends StatelessWidget{
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
-          leading: new Icon(Icons.shopping_cart),
-          backgroundColor: Color.fromARGB(226, 17, 118, 185),
+          leading: const Icon(Icons.shopping_cart),
+          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
         ),
         body: const Profile(),
       ),
     );
-    throw UnimplementedError();
   }
 }
 
@@ -47,10 +46,10 @@ class _Profile extends State<Profile> {
       bottomNavigationBar: 
       
       Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
-              color: Colors.black,
+              color: Colors.blueGrey,
               blurRadius: 10,
             ),
           ],
@@ -82,8 +81,6 @@ class _Profile extends State<Profile> {
         ),
       ),
     );
-    
-    throw UnimplementedError();
   }
   
 }
