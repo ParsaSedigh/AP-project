@@ -75,6 +75,7 @@ class _Categories extends State<Categories> {
                     ],
                   )
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -88,6 +89,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -136,6 +138,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -149,6 +152,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -197,6 +201,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -210,6 +215,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -223,6 +229,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -271,6 +278,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
@@ -284,6 +292,7 @@ class _Categories extends State<Categories> {
                     ],
                   ),
                 ),
+                SizedBox(width: 10,),
                 Container(
                   width: 160.0,
                   child: Column(
