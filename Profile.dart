@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'categories.dart';
 
-class AppBarForProfilePage extends StatelessWidget{
+class AppBarForProfilePage extends StatelessWidget {
   const AppBarForProfilePage({Key? key}) : super(key: key);
   static const String _title = 'Nama Kala';
   @override
@@ -27,25 +27,30 @@ class Profile extends StatefulWidget {
   @override
   _Profile createState() => _Profile();
 }
-
+/* Image.asset(
+            'assets/images/images.jpg',
+            scale: 1.5,
+          ),*/
 class _Profile extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child:
-      Image.asset('assets/images/images.jpg',
-      scale: 1.5,
-      ), 
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Center(
+              child: Container(
+                child: Image.asset(
+              'assets/images/images.jpg',
+              scale: 1.3,
+          ),
+              ),
+            )
+          ],
+        ),
       ),
       
-      
-      
-      
-      
-      
-      bottomNavigationBar: 
-      
-      Container(
+      bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -55,32 +60,37 @@ class _Profile extends State<Profile> {
           ],
         ),
         child: BottomNavigationBar(
-        onTap: ((value) {
-          if(value == 2) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForProfilePage()));
-          if(value == 0) Navigator.push(context, MaterialPageRoute(builder: (context) => AppBarForCategoriesPage()));
-        }),
-        type: BottomNavigationBarType.fixed,
+          onTap: ((value) {
+            if (value == 2) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForProfilePage()));
+            }
+            if (value == 0) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForCategoriesPage()));
+            }
+          }),
+          type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.category_sharp),
-              label: 'Categories',
-              backgroundColor: Color.fromARGB(226, 17, 118, 185)
-            ),
+                icon: Icon(Icons.category_sharp),
+                label: 'Categories',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_rounded),
-              label: 'Cart',
-              backgroundColor: Color.fromARGB(226, 17, 118, 185)
-            ),
+                icon: Icon(Icons.shopping_cart_rounded),
+                label: 'Cart',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
             BottomNavigationBarItem(
-
-              icon: Icon(Icons.person_rounded),
-              label: 'My profile', 
-              backgroundColor: Color.fromARGB(226, 17, 118, 185)
-            ),
+                icon: Icon(Icons.person_rounded),
+                label: 'My profile',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
           ],
         ),
       ),
     );
   }
-  
 }
