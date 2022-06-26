@@ -6,11 +6,14 @@ class AppBarForFavoriteListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title),
-        leading: const Icon(Icons.shopping_cart),
-        backgroundColor: const Color.fromARGB(226, 17, 118, 185),),
+        appBar: AppBar(
+          title: const Text(_title),
+          leading: const Icon(Icons.shopping_cart),
+          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
+        ),
         body: const FavotiteList(),
       ),
     );
@@ -24,11 +27,23 @@ class FavotiteList extends StatefulWidget {
 }
 
 class _FavoriteList extends State<FavotiteList> {
-
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Scaffold(
+        body: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                child: const Text(
+                  'Favorite List',
+                  style: TextStyle(
+                      color: Color.fromARGB(226, 17, 118, 185),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30),
+                )),
+              ],
+            )));
   }
-  
 }
