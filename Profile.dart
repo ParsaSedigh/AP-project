@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
+import 'Favorite_List.dart';
 import 'categories.dart';
 
 import 'main.dart';
@@ -36,7 +38,14 @@ class _Profile extends State<Profile> {
 
   // ignore: recursive_getters
   get phoneNumberController => null;
-
+  var items = [
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+  ];
+  String dropdownvalue = 'Item 1';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,32 +72,97 @@ class _Profile extends State<Profile> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: const OutlineInputBorder(),
-                  labelText: firstnameController,
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: const OutlineInputBorder(),
-                  labelText: phoneNumberController.toString() ,
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: const TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Email',
-                ),
-              ),
-            ),
+                padding: const EdgeInsets.all(10),
+                alignment: Alignment.topLeft,
+                child: Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.topLeft,
+                        padding: const EdgeInsets.fromLTRB(20, 40, 0, 10),
+                        child: const Text(
+                          "Name : ",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      const Divider(
+                        color: Colors.blueGrey,
+                        thickness: 2,
+                        indent: 10,
+                        endIndent: 10,
+                      ),
+                      Container(
+                        alignment: Alignment.topLeft,
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: const Text(
+                          "Phone Number : ",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      const Divider(
+                        color: Colors.blueGrey,
+                        thickness: 2,
+                        indent: 10,
+                        endIndent: 10,
+                      ),
+                      Container(
+                        alignment: Alignment.topLeft,
+                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                        child: const Text(
+                          "Email : ",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                      const Divider(
+                        color: Colors.blueGrey,
+                        thickness: 2,
+                        indent: 10,
+                        endIndent: 10,
+                      ),
+                      Container(
+                        alignment: Alignment.topLeft,
+                        padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+                        child: Wrap(
+                          children: [
+                            ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const AppBarForCategoriesPage()));
+                                },
+                                child: const Text("Confirmed Orders")),
+                            const SizedBox(
+                              width: 30,
+                            ),
+                            ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const AppBarForCategoriesPage()));
+                                },
+                                child: const Text("My Products")),
+                            ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              AppBarForFavoriteListPage()));
+                                },
+                                child: const Text("Favorite List")),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )),
           ],
         ),
       ),
