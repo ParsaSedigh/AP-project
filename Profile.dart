@@ -27,6 +27,7 @@ class Profile extends StatefulWidget {
   @override
   _Profile createState() => _Profile();
 }
+
 /* Image.asset(
             'assets/images/images.jpg',
             scale: 1.5,
@@ -41,15 +42,15 @@ class _Profile extends State<Profile> {
             Center(
               child: Container(
                 child: Image.asset(
-              'assets/images/images.jpg',
-              scale: 1.3,
-          ),
+                  'assets/images/images.jpg',
+                  scale: 1.3,
+                ),
               ),
             )
+            
           ],
         ),
       ),
-      
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
