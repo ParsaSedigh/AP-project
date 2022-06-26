@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'categories.dart';
 
+import 'main.dart';
+
 class AppBarForProfilePage extends StatelessWidget {
   const AppBarForProfilePage({Key? key}) : super(key: key);
   static const String _title = 'Nama Kala';
@@ -28,26 +30,65 @@ class Profile extends StatefulWidget {
   _Profile createState() => _Profile();
 }
 
-/* Image.asset(
-            'assets/images/images.jpg',
-            scale: 1.5,
-          ),*/
 class _Profile extends State<Profile> {
+  // ignore: recursive_getters
+  get firstnameController => null;
+
+  // ignore: recursive_getters
+  get phoneNumberController => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                child: const Text(
+                  'Profile',
+                  style: TextStyle(
+                      color: Color.fromARGB(226, 17, 118, 185),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30),
+                )),
             Center(
               child: Container(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Image.asset(
                   'assets/images/images.jpg',
                   scale: 1.3,
                 ),
               ),
-            )
-            
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  labelText: firstnameController,
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: const OutlineInputBorder(),
+                  labelText: phoneNumberController.toString() ,
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Email',
+                ),
+              ),
+            ),
           ],
         ),
       ),
