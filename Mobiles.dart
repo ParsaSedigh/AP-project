@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Samsung_S22.dart';
 import 'categories.dart';
 
 class AppBarForMobilesPage extends StatelessWidget {
@@ -21,7 +22,7 @@ class AppBarForMobilesPage extends StatelessWidget {
                         builder: (context) => const AppBarForCategoriesPage()));
               },
               icon: const Icon(Icons.arrow_back_rounded, color: Colors.white)),
-          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
+          backgroundColor: Colors.blueGrey,
         ),
         body: const Mobiles(),
       ),
@@ -82,7 +83,7 @@ class _Mobiles extends State<Mobiles> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const AppBarForMobilesPage()));
+                                        const AppBarForSamsungS22()));
                           },
                           icon: Image.asset(
                               'assets/images/Samsung_Galaxy_S22.jpg')))

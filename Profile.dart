@@ -20,7 +20,7 @@ class AppBarForProfilePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(_title),
           leading: const Icon(Icons.shopping_cart),
-          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
+          backgroundColor: Colors.blueGrey,
         ),
         body: const Profile(),
       ),

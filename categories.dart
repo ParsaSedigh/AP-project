@@ -17,7 +17,7 @@ class AppBarForCategoriesPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(_title),
           leading: const Icon(Icons.shopping_cart),
-          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
+          backgroundColor: Colors.blueGrey,
         ),
         body: const Categories(),
       ),
@@ -178,7 +178,7 @@ class _Categories extends State<Categories> {
               thickness: 2,
               indent: 5,
               endIndent: 10,
-              color: Colors.black,
+              color: Colors.blueGrey,
             ),
             const SizedBox(height: 50),
             const ListTile(
@@ -303,7 +303,7 @@ class _Categories extends State<Categories> {
               thickness: 2,
               indent: 5,
               endIndent: 10,
-              color: Colors.black,
+              color: Colors.blueGrey,
             ),
             const SizedBox(height: 50),
             const ListTile(
@@ -464,7 +464,7 @@ class _Categories extends State<Categories> {
               thickness: 2,
               indent: 5,
               endIndent: 10,
-              color: Colors.black,
+              color: Colors.blueGrey,
             ),
             const SizedBox(height: 50),
             const ListTile(
