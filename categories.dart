@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Mobiles.dart';
 import 'Profile.dart';
 
 import 'main.dart';
@@ -75,12 +76,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset(
-                                'assets/images/d_s22ultraphntmblck512_2020_13.jpg'),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForMobilesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/d_s22ultraphntmblck512_2020_13.jpg')),
                           ),
                           const Text(
                             'Mobile',
@@ -101,12 +111,21 @@ class _Categories extends State<Categories> {
                             boxShadow: <BoxShadow>[
                               BoxShadow(
                                 color: Colors.blueGrey,
-                                blurRadius: 5,
+                                blurRadius: 10,
                               ),
                             ],
                           ),
-                          child: Image.asset(
-                              'assets/images/photo-1593642632823-8f785ba67e45.jpg'),
+                          child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/photo-1593642632823-8f785ba67e45.jpg')),
                         ),
                         const Text(
                           'Lap top',
@@ -128,11 +147,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset('assets/images/download.jpg')),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/download.jpg'))),
                         const Text(
                           'Camera',
                           style: TextStyle(
@@ -172,12 +201,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset(
-                                'assets/images/mens-occasionwear-1805.jpg')),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/mens-occasionwear-1805.jpg'))),
                         const Text(
                           'Men',
                           style: TextStyle(
@@ -198,12 +236,21 @@ class _Categories extends State<Categories> {
                             boxShadow: <BoxShadow>[
                               BoxShadow(
                                 color: Colors.blueGrey,
-                                blurRadius: 5,
+                                blurRadius: 10,
                               ),
                             ],
                           ),
-                          child: Image.asset(
-                              'assets/images/a4642577-1b1b-42d1-abb2-0cf84361b563.jpg'),
+                          child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/a4642577-1b1b-42d1-abb2-0cf84361b563.jpg')),
                         ),
                         const Text(
                           'Women',
@@ -225,11 +272,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset('assets/images/1605784309.jpg')),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/1605784309.jpg'))),
                         const Text(
                           'Kids',
                           style: TextStyle(
@@ -269,12 +326,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset(
-                                'assets/images/Cambourne-Book-Club.jpg')),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/Cambourne-Book-Club.jpg'))),
                         const Text(
                           'Book',
                           style: TextStyle(
@@ -295,11 +361,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset('assets/images/2069613.jpg')),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/2069613.jpg'))),
                         const Text(
                           'Stationary',
                           style: TextStyle(
@@ -320,12 +396,21 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Image.asset(
-                                'assets/images/Instruments-1-1.jpg')),
+                            child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/Instruments-1-1.jpg')),),
                         const Text(
                           'Music',
                           style: TextStyle(
@@ -346,21 +431,23 @@ class _Categories extends State<Categories> {
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
                                   color: Colors.blueGrey,
-                                  blurRadius: 5,
+                                  blurRadius: 10,
                                 ),
                               ],
                             ),
-                            child: Container(
-                                decoration: const BoxDecoration(
-                                  boxShadow: <BoxShadow>[
-                                    BoxShadow(
-                                      color: Colors.blueGrey,
-                                      blurRadius: 5,
-                                    ),
-                                  ],
-                                ),
-                                child: Image.asset(
-                                    'assets/images/handicraft-500x500.jpg'))),
+                            child: Container( 
+                              child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/handicraft-500x500.jpg')),
+                            )),
                         const Text(
                           'Handicrafts',
                           style: TextStyle(
@@ -402,12 +489,21 @@ class _Categories extends State<Categories> {
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
                                     color: Colors.blueGrey,
-                                    blurRadius: 5,
+                                    blurRadius: 10,
                                   ),
                                 ],
                               ),
-                              child: Image.asset(
-                                  'assets/images/8030014d4dc640195859e0e3f2af5ba9.jpg'),
+                              child: IconButton(
+                                  iconSize: 140,
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForCategoriesPage()));
+                                  },
+                                  icon: Image.asset(
+                                      'assets/images/8030014d4dc640195859e0e3f2af5ba9.jpg')),
                             ),
                           ),
                         ),
@@ -431,12 +527,21 @@ class _Categories extends State<Categories> {
                             boxShadow: <BoxShadow>[
                               BoxShadow(
                                 color: Colors.blueGrey,
-                                blurRadius: 5,
+                                blurRadius: 10,
                               ),
                             ],
                           ),
-                          child: Image.asset(
-                              'assets/images/how-to-clean-and-disinfect-sports-equipment.jpg'),
+                          child: IconButton(
+                              iconSize: 140,
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const AppBarForCategoriesPage()));
+                              },
+                              icon: Image.asset(
+                                  'assets/images/how-to-clean-and-disinfect-sports-equipment.jpg')),
                         ),
                         const Text(
                           'Sport Tools',
@@ -454,15 +559,25 @@ class _Categories extends State<Categories> {
                     child: Column(
                       children: [
                         Container(
-                            decoration: const BoxDecoration(
-                              boxShadow: <BoxShadow>[
-                                BoxShadow(
-                                  color: Colors.blueGrey,
-                                  blurRadius: 5,
-                                ),
-                              ],
-                            ),
-                            child: Image.asset('assets/images/960x0.jpg')),
+                          decoration: const BoxDecoration(
+                            boxShadow: <BoxShadow>[
+                              BoxShadow(
+                                color: Colors.blueGrey,
+                                blurRadius: 10,
+                              ),
+                            ],
+                          ),
+                          child: IconButton(
+                              iconSize: 140,
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const AppBarForCategoriesPage()));
+                              },
+                              icon: Image.asset('assets/images/960x0.jpg')),
+                        ),
                         const Text(
                           'Camping & traveling tools',
                           style: TextStyle(
