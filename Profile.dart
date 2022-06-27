@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:nama_kala/Confirmed_Orders.dart';
+import 'package:nama_kala/My_Products.dart';
 
 import 'Favorite_List.dart';
 import 'categories.dart';
@@ -146,7 +147,7 @@ class _Profile extends State<Profile> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const AppBarForCategoriesPage()));
+                                              const AppBarForMyProductsPage()));
                                 },
                                 child: const Text("My Products")),
                             ElevatedButton(
@@ -155,7 +156,7 @@ class _Profile extends State<Profile> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              AppBarForFavoriteListPage()));
+                                              const AppBarForFavoriteListPage()));
                                 },
                                 child: const Text("Favorite List")),
                           ],
