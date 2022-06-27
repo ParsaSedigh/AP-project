@@ -35,19 +35,7 @@ class Profile extends StatefulWidget {
 }
 
 class _Profile extends State<Profile> {
-  // ignore: recursive_getters
-  get firstnameController => null;
 
-  // ignore: recursive_getters
-  get phoneNumberController => null;
-  var items = [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
-  ];
-  String dropdownvalue = 'Item 1';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
