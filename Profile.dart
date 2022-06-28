@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:nama_kala/Confirmed_Orders.dart';
-import 'package:nama_kala/My_Products.dart';
+import 'package:namakala/Confirmed_Orders.dart';
+import 'package:namakala/My_Products.dart';
 
 import 'Favorite_List.dart';
 import 'categories.dart';

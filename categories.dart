@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'Mobiles.dart';
 import 'Profile.dart';
 
-import 'main.dart';
-
 class AppBarForCategoriesPage extends StatelessWidget {
   const AppBarForCategoriesPage({Key? key}) : super(key: key);
   static const String _title = 'Nama Kala';

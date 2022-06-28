@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:nama_kala/Mobiles.dart';
+import 'package:namakala/Mobiles.dart';
 
 class AppBarForSamsungS22 extends StatelessWidget {
   const AppBarForSamsungS22({Key? key}) : super(key: key);
