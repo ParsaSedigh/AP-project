@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:namakala/Confirmed_Orders.dart';
 import 'package:namakala/My_Products.dart';
-
+import 'Cart.dart';
 import 'Favorite_List.dart';
 import 'categories.dart';
 
-import 'main.dart';
+
 
 class AppBarForProfilePage extends StatelessWidget {
   const AppBarForProfilePage({Key? key}) : super(key: key);
@@ -180,6 +179,12 @@ class _Profile extends State<Profile> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const AppBarForProfilePage()));
+            }
+            if (value == 1) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForCartPage()));
             }
             if (value == 0) {
               Navigator.push(

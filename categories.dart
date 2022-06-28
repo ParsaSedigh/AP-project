@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Cart.dart';
 import 'Mobiles.dart';
 import 'Profile.dart';
 
@@ -614,6 +615,12 @@ class _Categories extends State<Categories> {
                   MaterialPageRoute(
                       builder: (context) => const AppBarForProfilePage()));
             }
+            if (value == 1) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForCartPage()));
+            }
             if (value == 0) {
               Navigator.push(
                   context,
@@ -636,6 +643,7 @@ class _Categories extends State<Categories> {
                 label: 'My profile',
                 backgroundColor: Color.fromARGB(226, 17, 118, 185)),
           ],
+          currentIndex: 0,
         ),
       ),
     );
