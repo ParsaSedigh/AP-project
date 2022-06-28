@@ -22,7 +22,7 @@ class AppBarForSamsungS22 extends StatelessWidget {
                         builder: (context) => const AppBarForMobilesPage()));
               },
               icon: const Icon(Icons.arrow_back_rounded, color: Colors.white)),
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
         ),
         body: const SamsungS22(),
       ),

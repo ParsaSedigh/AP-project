@@ -20,7 +20,7 @@ class AppBarForProfilePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(_title),
           leading: const Icon(Icons.shopping_cart),
-          backgroundColor: Colors.blueGrey,
+          backgroundColor:const Color.fromARGB(226, 17, 118, 185),
         ),
         body: const Profile(),
       ),
@@ -39,121 +39,129 @@ class _Profile extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                child: const Text(
-                  'Profile',
-                  style: TextStyle(
-                      color: Color.fromARGB(226, 17, 118, 185),
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
-            Center(
-              child: Container(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                child: Image.asset(
-                  'assets/images/images.jpg',
-                  scale: 1.3,
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/profile_BG.jpg"),
+                fit: BoxFit.cover)),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+          child: Column(
+            children: [
+              Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  child: const Text(
+                    'Profile',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 30),
+                  )),
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  child: Image.asset(
+                    'assets/images/images.jpg',
+                    scale: 1.3,
+                  ),
                 ),
               ),
-            ),
-            Container(
-                padding: const EdgeInsets.all(10),
-                alignment: Alignment.topLeft,
-                child: Center(
-                  child: Column(
-                    children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        padding: const EdgeInsets.fromLTRB(20, 40, 0, 10),
-                        child: const Text(
-                          "Name : ",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500),
+              Container(
+                  padding: const EdgeInsets.all(10),
+                  alignment: Alignment.topLeft,
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment.topLeft,
+                          padding: const EdgeInsets.fromLTRB(20, 40, 0, 10),
+                          child: const Text(
+                            "Name : ",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w500),
+                          ),
                         ),
-                      ),
-                      const Divider(
-                        color: Colors.blueGrey,
-                        thickness: 2,
-                        indent: 10,
-                        endIndent: 10,
-                      ),
-                      Container(
-                        alignment: Alignment.topLeft,
-                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
-                        child: const Text(
-                          "Phone Number : ",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500),
+                        const Divider(
+                          color: Colors.blueGrey,
+                          thickness: 2,
+                          indent: 10,
+                          endIndent: 10,
                         ),
-                      ),
-                      const Divider(
-                        color: Colors.blueGrey,
-                        thickness: 2,
-                        indent: 10,
-                        endIndent: 10,
-                      ),
-                      Container(
-                        alignment: Alignment.topLeft,
-                        padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
-                        child: const Text(
-                          "Email : ",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500),
+                        Container(
+                          alignment: Alignment.topLeft,
+                          padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                          child: const Text(
+                            "Phone Number : ",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w500),
+                          ),
                         ),
-                      ),
-                      const Divider(
-                        color: Colors.blueGrey,
-                        thickness: 2,
-                        indent: 10,
-                        endIndent: 10,
-                      ),
-                      Container(
-                        alignment: Alignment.topLeft,
-                        padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
-                        child: Wrap(
-                          children: [
-                            ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const AppBarForConfirmedOrdersPage()));
-                                },
-                                child: const Text("Confirmed Orders")),
-                            const SizedBox(
-                              width: 30,
-                            ),
-                            ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const AppBarForMyProductsPage()));
-                                },
-                                child: const Text("My Products")),
-                            ElevatedButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const AppBarForFavoriteListPage()));
-                                },
-                                child: const Text("Favorite List")),
-                          ],
+                        const Divider(
+                          color: Colors.blueGrey,
+                          thickness: 2,
+                          indent: 10,
+                          endIndent: 10,
                         ),
-                      )
-                    ],
-                  ),
-                )),
-          ],
+                        Container(
+                          alignment: Alignment.topLeft,
+                          padding: const EdgeInsets.fromLTRB(20, 10, 0, 10),
+                          child: const Text(
+                            "Email : ",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                        const Divider(
+                          color: Colors.blueGrey,
+                          thickness: 2,
+                          indent: 10,
+                          endIndent: 10,
+                        ),
+                        Container(
+                          alignment: Alignment.topLeft,
+                          padding: const EdgeInsets.fromLTRB(10, 10, 0, 10),
+                          child: Wrap(
+                            children: [
+                              ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForConfirmedOrdersPage()));
+                                  },
+                                  child: const Text("Confirmed Orders")),
+                              const SizedBox(
+                                width: 30,
+                              ),
+                              ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForMyProductsPage()));
+                                  },
+                                  child: const Text("My Products")),
+                                  const SizedBox(width: 50,),
+                              ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AppBarForFavoriteListPage()));
+                                  },
+                                  child: const Text("Favorite List")),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  )),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: Container(

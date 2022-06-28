@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text(_title),
         leading: const Icon(Icons.shopping_cart),
-        backgroundColor: Colors.blueGrey,),
+        backgroundColor: const Color.fromARGB(226, 17, 118, 185),),
         body: const MyStatefulWidget(),
       ),
     );
@@ -42,7 +42,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   TextEditingController phoneNumberController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -162,12 +161,11 @@ class AppBarForSignInPage extends StatelessWidget{
       title: _title,
       home: Scaffold(
         appBar: AppBar(title: const Text(_title),
-        leading: new Icon(Icons.shopping_cart),
+        leading: const Icon(Icons.shopping_cart),
         backgroundColor: const Color.fromARGB(226, 17, 118, 185),),
         body: const SignInPage(),
       ),
     );
-    throw UnimplementedError();
   }
 }
 class SignInPage extends StatefulWidget {

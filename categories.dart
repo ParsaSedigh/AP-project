@@ -15,7 +15,7 @@ class AppBarForCategoriesPage extends StatelessWidget {
         appBar: AppBar(
           title: const Text(_title),
           leading: const Icon(Icons.shopping_cart),
-          backgroundColor: Colors.blueGrey,
+          backgroundColor: const Color.fromARGB(226, 17, 118, 185),
         ),
         body: const Categories(),
       ),
