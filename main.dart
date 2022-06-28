@@ -43,104 +43,112 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     
-    return Padding(
-        padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
-        child: ListView(
-          children: <Widget>[
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'Sign up',
-                  style: TextStyle(
-                      color: Color.fromARGB(226, 17, 118, 185),
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: firstnameController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'First Name',
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: lastnameController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Last Name',
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: phoneNumberController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Phone Number',
-                ),
-                keyboardType: TextInputType.number,
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: emailController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Email',
-                ),
-                keyboardType: TextInputType.emailAddress,
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                obscureText: true,
-                controller: passwordController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password',
-                ),
-              ),
-            ),
-            
-            Container(
-                height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
-                  child: const Text('Confirm'),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
-                  },
-                )
-            ),
-            Row(
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/Sign_Up_BG.JPG"),
+                fit: BoxFit.cover)),
+        child: Padding(
+            padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
+            child: ListView(
               children: <Widget>[
-                const Text('Already have an account?'),
-                TextButton(
-                  style: TextButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
-                  child: const Text(
-                    'Sign in',
-                    style: TextStyle(fontSize: 20),
-                    
+                Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.all(10),
+                    child: const Text(
+                      'Sign up',
+                      style: TextStyle(
+                          color: Color.fromARGB(226, 17, 118, 185),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30),
+                    ),),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    controller: firstnameController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'First Name',
+                    ),
                   ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForSignInPage()));
-                  },
-                )
+                ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    controller: lastnameController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Last Name',
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    controller: phoneNumberController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Phone Number',
+                    ),
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    controller: emailController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Email',
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    obscureText: true,
+                    controller: passwordController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Password',
+                    ),
+                  ),
+                ),
+                
+                Container(
+                    height: 50,
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
+                      child: const Text('Confirm'),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
+                      },
+                    )
+                ),
+                Row(
+                  children: <Widget>[
+                    const Text('Already have an account?'),
+                    TextButton(
+                      style: TextButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
+                      child: const Text(
+                        'Sign in',
+                        style: TextStyle(fontSize: 20),
+                        
+                      ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForSignInPage()));
+                      },
+                    )
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ),
               ],
-              mainAxisAlignment: MainAxisAlignment.center,
-            ),
-          ],
-        ));
+            )),
+      ),
+    );
   }
 }
 class AppBarForSignInPage extends StatelessWidget{
@@ -176,58 +184,64 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
-        child: ListView(
-          children: <Widget>[
-            
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'Sign in',
-                  style: TextStyle(
-                      color: Color.fromARGB(226, 17, 118, 185),
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
-            Container(
-                padding: const EdgeInsets.all(10),
-                child: TextField(
-                  controller: phoneNumberController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Phone Number',
-                  ),
-                  keyboardType: TextInputType.number,
-                ),
-              ),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/Sign_Up_BG.JPG"),
+                fit: BoxFit.cover)),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
+          child: ListView(
+            children: <Widget>[
+              
               Container(
-                padding: const EdgeInsets.all(10),
-                child: TextField(
-                  obscureText: true,
-                  controller: passwordController,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(10),
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(
+                        color: Color.fromARGB(226, 17, 118, 185),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 30),
+                  )),
+              Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    controller: phoneNumberController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Phone Number',
+                    ),
+                    keyboardType: TextInputType.number,
                   ),
                 ),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: TextField(
+                    obscureText: true,
+                    controller: passwordController,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Password',
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0) ,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
+                    child: const Text('Confirm'),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
+                    },
+                  )
               ),
-              Container(
-                height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0) ,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
-                  child: const Text('Confirm'),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AppBarForCategoriesPage()));
-                  },
-                )
-            ),
-          ],
-        ),
-       ),
+            ],
+          ),
+         ),
+      ),
     );
   }
 }
