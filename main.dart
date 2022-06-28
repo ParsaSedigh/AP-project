@@ -69,6 +69,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'First Name',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                   ),
                 ),
@@ -79,6 +80,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Last Name',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                   ),
                 ),
@@ -89,6 +91,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Phone Number',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                     keyboardType: TextInputType.number,
                   ),
@@ -100,6 +103,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                     keyboardType: TextInputType.emailAddress,
                   ),
@@ -112,6 +116,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                   ),
                 ),
@@ -129,7 +134,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 ),
                 Row(
                   children: <Widget>[
-                    const Text('Already have an account?'),
+                    const Text('Already have an account?' , style: TextStyle(backgroundColor: Colors.white),),
                     TextButton(
                       style: TextButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
                       child: const Text(
@@ -210,6 +215,7 @@ class _SignInPageState extends State<SignInPage> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Phone Number',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                     keyboardType: TextInputType.number,
                   ),
@@ -222,6 +228,7 @@ class _SignInPageState extends State<SignInPage> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
+                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                   ),
                 ),

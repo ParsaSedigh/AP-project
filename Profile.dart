@@ -193,7 +193,7 @@ class _Profile extends State<Profile> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.category_sharp),
                 label: 'Categories',
-                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
+                backgroundColor: Colors.black),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart_rounded),
                 label: 'Cart',
@@ -203,6 +203,7 @@ class _Profile extends State<Profile> {
                 label: 'My profile',
                 backgroundColor: Color.fromARGB(226, 17, 118, 185)),
           ],
+          currentIndex: 2,
         ),
       ),
     );
