@@ -38,6 +38,7 @@ class _Categories extends State<Categories> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/Categories_BG_Image.jpg"),
+                opacity: 0.3,
                 fit: BoxFit.cover)),
         child: SingleChildScrollView(
           child: Column(

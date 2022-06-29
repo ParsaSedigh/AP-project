@@ -42,6 +42,7 @@ class _Profile extends State<Profile> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/profile_BG.jpg"),
+                opacity: 0.9,
                 fit: BoxFit.cover)),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
