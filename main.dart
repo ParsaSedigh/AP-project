@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import 'categories.dart';
@@ -47,6 +49,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/Sign_Up_BG.JPG"),
+                opacity: 0.24,
                 fit: BoxFit.cover)),
         child: Padding(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
@@ -66,10 +69,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: firstnameController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'First Name',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                   ),
                 ),
@@ -77,10 +80,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: lastnameController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Last Name',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
+
                     ),
                   ),
                 ),
@@ -88,10 +92,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: phoneNumberController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Phone Number',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
+
                     ),
                     keyboardType: TextInputType.number,
                   ),
@@ -100,10 +105,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: emailController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
+
                     ),
                     keyboardType: TextInputType.emailAddress,
                   ),
@@ -113,10 +119,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   child: TextField(
                     obscureText: true,
                     controller: passwordController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
+
                     ),
                   ),
                 ),
@@ -134,7 +141,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 ),
                 Row(
                   children: <Widget>[
-                    const Text('Already have an account?' , style: TextStyle(backgroundColor: Colors.white),),
+                    const Text('Already have an account?' , style: TextStyle(fontWeight: FontWeight.w500)),
                     TextButton(
                       style: TextButton.styleFrom(primary: const Color.fromARGB(226, 17, 118, 185)),
                       child: const Text(
@@ -192,6 +199,7 @@ class _SignInPageState extends State<SignInPage> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/Sign_Up_BG.JPG"),
+                opacity: 0.25,
                 fit: BoxFit.cover)),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(30, 20, 30, 50),
@@ -212,10 +220,10 @@ class _SignInPageState extends State<SignInPage> {
                   padding: const EdgeInsets.all(10),
                   child: TextField(
                     controller: phoneNumberController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Phone Number',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                     keyboardType: TextInputType.number,
                   ),
@@ -225,10 +233,10 @@ class _SignInPageState extends State<SignInPage> {
                   child: TextField(
                     obscureText: true,
                     controller: passwordController,
+                    style: const TextStyle( color: Colors.black , fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
-                      labelStyle: TextStyle( color: Color.fromARGB(223, 73, 169, 233),),
                     ),
                   ),
                 ),
