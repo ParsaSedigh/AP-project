@@ -60,10 +60,10 @@ class _Profile extends State<Profile> {
               Center(
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  child: Image.asset(
-                    'assets/images/images.jpg',
-                    scale: 1.3,
-                  ),
+                  child: const CircleAvatar(
+                    backgroundImage : AssetImage("assets/images/images.jpg"),
+                    radius: 80,
+                  )
                 ),
               ),
               Container(
