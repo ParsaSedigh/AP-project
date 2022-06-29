@@ -3,6 +3,7 @@ import 'package:namakala/Confirmed_Orders.dart';
 import 'package:namakala/My_Products.dart';
 import 'Cart.dart';
 import 'Favorite_List.dart';
+import 'Sell.dart';
 import 'categories.dart';
 
 
@@ -175,11 +176,17 @@ class _Profile extends State<Profile> {
         ),
         child: BottomNavigationBar(
           onTap: ((value) {
-            if (value == 2) {
+            if (value == 3) {
               Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const AppBarForProfilePage()));
+            }
+            if (value == 2) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForSellPage()));
             }
             if (value == 1) {
               Navigator.push(
@@ -205,11 +212,15 @@ class _Profile extends State<Profile> {
                 label: 'Cart',
                 backgroundColor: Color.fromARGB(226, 17, 118, 185)),
             BottomNavigationBarItem(
+                icon: Icon(Icons.sell_rounded),
+                label: 'Sale',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
+            BottomNavigationBarItem(
                 icon: Icon(Icons.person_rounded),
                 label: 'My profile',
                 backgroundColor: Color.fromARGB(226, 17, 118, 185)),
           ],
-          currentIndex: 2,
+          currentIndex: 3,
         ),
       ),
     );

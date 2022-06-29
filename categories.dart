@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Cart.dart';
 import 'Mobiles.dart';
 import 'Profile.dart';
+import 'Sell.dart';
 
 class AppBarForCategoriesPage extends StatelessWidget {
   const AppBarForCategoriesPage({Key? key}) : super(key: key);
@@ -610,11 +611,17 @@ class _Categories extends State<Categories> {
         ),
         child: BottomNavigationBar(
           onTap: ((value) {
-            if (value == 2) {
+            if (value == 3) {
               Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const AppBarForProfilePage()));
+            }
+            if (value == 2) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AppBarForSellPage()));
             }
             if (value == 1) {
               Navigator.push(
@@ -638,6 +645,10 @@ class _Categories extends State<Categories> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart_rounded),
                 label: 'Cart',
+                backgroundColor: Color.fromARGB(226, 17, 118, 185)),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.sell_rounded),
+                label: 'Sale',
                 backgroundColor: Color.fromARGB(226, 17, 118, 185)),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_rounded),

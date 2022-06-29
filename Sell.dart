@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'Cart.dart';
 import 'Profile.dart';
+
 import 'Profile.dart';
-import 'Sell.dart';
 import 'categories.dart';
 
-
-class AppBarForCartPage extends StatelessWidget {
-  const AppBarForCartPage({Key? key}) : super(key: key);
+class AppBarForSellPage extends StatelessWidget {
+  const AppBarForSellPage({Key? key}) : super(key: key);
   static const String _title = 'Nama Kala';
   @override
   Widget build(BuildContext context) {
@@ -20,27 +20,27 @@ class AppBarForCartPage extends StatelessWidget {
           leading: const Icon(Icons.shopping_cart),
           backgroundColor:const Color.fromARGB(226, 17, 118, 185),
         ),
-        body: const Cart(),
+        body: const Sell(),
       ),
     );
   }
 }
 
-class Cart extends StatefulWidget {
-  const Cart({Key? key}) : super(key: key);
+class Sell extends StatefulWidget {
+  const Sell({Key? key}) : super(key: key);
   @override
-  _Cart createState() => _Cart();
+  _Sell createState() => _Sell();
 }
 
-class _Cart extends State<Cart> {
+class _Sell extends State<Sell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+      body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/Cart_BG.jpg"),
-                opacity: 0.2,
+                image: AssetImage("assets/images/Sell_BG.jpg"),
+                opacity: 0.1,
                 fit: BoxFit.cover)),
           child: Padding(
               padding: const EdgeInsets.fromLTRB(30, 10, 30, 50),
@@ -50,7 +50,7 @@ class _Cart extends State<Cart> {
                   alignment: Alignment.center,
                   padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: const Text(
-                    'Cart',
+                    'Sale',
                     style: TextStyle(
                         color: Color.fromARGB(226, 17, 118, 185),
                         fontWeight: FontWeight.w500,
@@ -60,7 +60,7 @@ class _Cart extends State<Cart> {
               )
             ),
         ),
-          bottomNavigationBar: Container(
+      bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -115,9 +115,9 @@ class _Cart extends State<Cart> {
                 label: 'My profile',
                 backgroundColor: Color.fromARGB(226, 17, 118, 185)),
           ],
-          currentIndex: 1,
+          currentIndex: 2,
         ),)
-        );
+    );
   }
-  
+
 }
