@@ -123,11 +123,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
-
                     ),
                   ),
                 ),
-                
                 Container(
                     height: 50,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
