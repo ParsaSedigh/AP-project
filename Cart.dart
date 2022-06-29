@@ -35,7 +35,13 @@ class _Cart extends State<Cart> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          child: SingleChildScrollView(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/Cart_BG.jpg"),
+                opacity: 0.2,
+                fit: BoxFit.cover)),
+          child: Padding(
+              padding: const EdgeInsets.fromLTRB(30, 10, 30, 50),
               child: Column(
                 children: [
                   Container(
