@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:namakala/Confirmed_Orders.dart';
-import 'package:namakala/My_Products.dart';
+import 'package:namakala2/Confirmed_Orders.dart';
+import 'package:namakala2/My_Products.dart';
 import 'Cart.dart';
 import 'Favorite_List.dart';
 import 'Sell.dart';

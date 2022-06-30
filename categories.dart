@@ -605,7 +605,7 @@ class _Categories extends State<Categories> {
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Colors.blueGrey,
-              blurRadius: 10,
+              blurRadius: 20,
             ),
           ],
         ),
